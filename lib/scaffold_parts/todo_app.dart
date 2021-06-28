@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gsg_assignment1/data/favorite_data.dart';
+import 'package:gsg_assignment1/widgets/favorite_widget.dart';
+import 'package:gsg_assignment1/widgets/item_widget.dart';
 
 class TodoPage extends StatefulWidget {
   @override
@@ -44,15 +47,11 @@ class _TodoPageState extends State<TodoPage>
           ),
         ),
         body: TabBarView(
-            physics: NeverScrollableScrollPhysics(),
+            //physics: NeverScrollableScrollPhysics(),
             controller: tabController,
             children: [
-              Center(
-                child: Text('Meow'),
-              ),
-              Center(
-                child: Text('Favourite'),
-              ),
+              ItemWidget(),
+              FavoriteWidget(),
               Center(
                 child: Text('Profile'),
               ),
@@ -74,47 +73,45 @@ class _TodoPageState extends State<TodoPage>
   }
 }
 
-class TestScreen extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return TestScreenState();
-  }
-}
-
-class TestScreenState extends State<TestScreen> {
-  String text = 'stateful widget';
-  bool rememberMe = true;
-  String? newValue;
-  @override
-  Widget build(BuildContext context) {
-    newValue = rememberMe ? 'remeber' : 'notRemeber';
-    // TODO: implement build
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(text),
-      ),
-      body: Center(
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Row(
-            children: [
-              Checkbox(
-                value: rememberMe,
-                onChanged: (newValue) {
-                  setState(() {
-                    rememberMe = newValue!;
-                  });
-                },
-              ),
-              Text(
-                rememberMe ? "Accepted" : "Rejected",
-                style: TextStyle(color: Colors.green),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+// class TestScreen extends StatefulWidget {
+//   @override
+//   State<StatefulWidget> createState() {
+//     return TestScreenState();
+//   }
+// }
+// 
+// class TestScreenState extends State<TestScreen> {
+//   String text = 'stateful widget';
+//   bool rememberMe = true;
+//   String? newValue;
+//   @override
+//   Widget build(BuildContext context) {
+//     newValue = rememberMe ? 'remeber' : 'notRemeber';
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text(text),
+//       ),
+//       body: Center(
+//         child: Container(
+//           padding: EdgeInsets.symmetric(horizontal: 20),
+//           child: Row(
+//             children: [
+//               Checkbox(
+//                 value: rememberMe,
+//                 onChanged: (newValue) {
+//                   setState(() {
+//                     rememberMe = newValue!;
+//                   });
+//                 },
+//               ),
+//               Text(
+//                 rememberMe ? "Accepted" : "Rejected",
+//                 style: TextStyle(color: Colors.green),
+//               )
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }

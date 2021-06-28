@@ -1,5 +1,8 @@
 class Item {
-  String label;
-  String value;
-  Item(this.label, this.value);
+  String id;
+  String name;
+  String date;
+  bool isFavorite;
+
+  Item(this.id, this.name, this.date, this.isFavorite);
 }

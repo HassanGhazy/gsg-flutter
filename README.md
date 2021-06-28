@@ -1,16 +1,19 @@
-# gsg_assignment1
+# Gaza Sky Geeks Flutter
 
-A new Flutter project.
+Flutter project.
 
-## Getting Started
+## Assignment 1
 
-This project is a starting point for a Flutter application.
+Using tab bar and state full widget, create interactive screen.
 
-A few resources to get you started if this is your first Flutter project:
+in other words build a simple app have list of posts with icon favorite
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+when the user click on this icon will saved this post for favorite post
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Simple images for the final result
+
+![alt text](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/1.png?raw=true)
+
+![alt text](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/2.png?raw=true)
+
+![alt text](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/3.png?raw=true)

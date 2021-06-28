@@ -27,39 +27,40 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'TODO APP',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Screen1(),
+      home: TodoPage(),
     );
   }
 }
 
-class Screen1 extends StatelessWidget {
-  List<Item> items = [
-    Item('name', 'omar'),
-    Item('country', 'palestine'),
-    Item('city', 'gaza'),
-    Item('street', 'alremal'),
-    Item('phone', '123456'),
-    Item('country code', '+972'),
-  ];
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.grey,
-        title: Text('First App'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: students.map((e) {
-              return StudentWidget(e);
-            }).toList()),
-      ),
-    );
-  }
-}
+// class Screen1 extends StatelessWidget {
+//   List<Item> items = [
+//     Item('name', 'omar'),
+//     Item('country', 'palestine'),
+//     Item('city', 'gaza'),
+//     Item('street', 'alremal'),
+//     Item('phone', '123456'),
+//     Item('country code', '+972'),
+//   ];
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     return Scaffold(
+//       appBar: AppBar(
+//         backgroundColor: Colors.grey,
+//         title: Text('First App'),
+//       ),
+//       body: SingleChildScrollView(
+//         child: Column(
+//             crossAxisAlignment: CrossAxisAlignment.stretch,
+//             children: students.map((e) {
+//               return StudentWidget(e);
+//             }).toList()),
+//       ),
+//     );
+//   }
+// }

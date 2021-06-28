@@ -6,7 +6,6 @@ class TextWidget extends StatelessWidget {
   TextWidget({this.label, this.value});
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Row(
       children: [
         Expanded(
