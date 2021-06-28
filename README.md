@@ -12,8 +12,8 @@ when the user click on this icon will saved this post for favorite post
 
 Simple images for the final result
 
-![alt text](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/1.png?raw=true)
+![alt text](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/01.png?raw=true)
 
-![alt text](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/2.png?raw=true)
+![alt text](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/02.png?raw=true)
 
-![alt text](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/3.png?raw=true)
+![alt text](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/03.png?raw=true)
