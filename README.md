@@ -1,4 +1,4 @@
-# lec12
+# Gaza Sky Geeks training
 
 A new Flutter project.
 
