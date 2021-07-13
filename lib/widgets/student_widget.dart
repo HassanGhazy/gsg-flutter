@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/student.dart';
 
+// ignore: must_be_immutable
 class StudentWidget extends StatelessWidget {
   Student student;
   double gpa = 0.0;
@@ -10,7 +11,6 @@ class StudentWidget extends StatelessWidget {
   }
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
         padding: EdgeInsets.all(15),
         margin: EdgeInsets.all(15),

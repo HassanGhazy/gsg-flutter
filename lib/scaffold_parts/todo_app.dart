@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gsg_assignment1/data/favorite_data.dart';
+// import 'package:gsg_assignment1/data/favorite_data.dart';
 import 'package:gsg_assignment1/widgets/favorite_widget.dart';
 import 'package:gsg_assignment1/widgets/item_widget.dart';
 
@@ -25,6 +25,7 @@ class _TodoPageState extends State<TodoPage>
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
         appBar: AppBar(
           title: Text('TODO App'),

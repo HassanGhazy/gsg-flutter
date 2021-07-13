@@ -2,18 +2,23 @@
 
 Flutter project.
 
-## Assignment 1
+## Assignment 2
 
-Using tab bar and state full widget, create interactive screen.
+The mentor want from this assignment to check if the students follow him when he explaining the matrial or not
 
-in other words build a simple app have list of posts with icon favorite
+Note for the mentor:
 
-when the user click on this icon will saved this post for favorite post
+You need To check just 3 files for this assignment:
 
-Simple images for the final result
+* main.dart
+* Welcome.dart and thats file exist in screens folder
+* login.dart and thats file exist in screens folder
 
-![alt text](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/1.png?raw=true)
 
-![alt text](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/2.png?raw=true)
+![image from the app](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/01.JPG?raw=true)
 
-![alt text](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/3.png?raw=true)
+![image from the app](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/02.JPG?raw=true)
+
+![image from the app](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/03.JPG?raw=true)
+
+![image from the app](https://github.com/HassanGhazy/gsg-flutter/blob/interactive-screen/img/04.JPG?raw=true)
