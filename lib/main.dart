@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:gsg_assignment1/screens/login.dart';
+import 'package:gsg_assignment1/helper/shared.dart';
+import 'package:gsg_assignment1/screens/splash_screen.dart';
+import '../router/app_router.dart';
+import '../screens/customer_page.dart';
+import '../screens/parchant_page.dart';
+import '../screens/login.dart';
 // import './data/students_data.dart';
 // import './models/item.dart';
 // import './scaffold_parts/todo_app.dart';
@@ -24,6 +29,7 @@ show his average in suitable place
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+  await SpHelper.spHelper.initSharedPreferences();
 
   runApp(
     EasyLocalization(
@@ -48,10 +54,25 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: Login(),
+        home: SpalshScreen(),
+        navigatorKey: AppRouter.route.navKey,
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
+        routes: {
+          'ParchantPage': (ctx) => ParchantPage(),
+          'CustomerPage': (ctx) => CustomerPage(),
+          'login': (ctx) => Login(),
+        },
+        // onGenerateRoute: (RouteSettings rs) {
+        //   String? name = rs.name;
+        //   var args = rs.arguments;
+        //   if (name == 'ParchantPage') {
+        //     return AppRouter.route.pushPage(ParchantPage(args));
+        //   } else if (name == 'CustomerPage') {
+        //     return AppRouter.route.pushPage(CustomerPage(args));
+        //   }
+        // },
       ),
     );
   }

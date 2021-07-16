@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gsg_assignment1/screens/welcome.dart';
+import 'package:gsg_assignment1/helper/shared.dart';
+import '../router/app_router.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -16,8 +17,8 @@ class _LoginState extends State<Login> {
   final TextEditingController _passController = TextEditingController();
   final TextEditingController _hiddenController = TextEditingController();
   final _form = GlobalKey<FormState>();
-  List<String?> items = ['A', 'B', 'C'];
-  String initial = 'A';
+  List<String?> items = ['Electronic', 'Watches', 'Computers'];
+  String initial = 'Electronic';
   @override
   void initState() {
     super.initState();
@@ -33,34 +34,34 @@ class _LoginState extends State<Login> {
 
   @override
   Widget build(BuildContext context) {
-    void _sendAuth() {
+    void _sendAuth() async {
       final isValid = _form.currentState!.validate();
       if (!isValid) {
         return;
       }
 
       _form.currentState!.save();
-      setState(() {});
-      Navigator.of(context).push(
-        MaterialPageRoute<void>(
-          builder: (BuildContext context) {
-            return Welcome();
-          },
-          settings: RouteSettings(arguments: {
-            'email': _emailController.text,
-            'pass': _passController.text,
-            'type': accountType,
-            'drop': initial,
-          }),
-        ),
-      );
+
+      // dynamic res = await Navigator.of(context).pushNamed('home', arguments: {
+      //   'email': _emailController.text,
+      //   'pass': _passController.text,
+      //   'type': accountType,
+      //   'drop': initial,
+      // });
+      SpHelper.spHelper.saveUserName(_emailController.text);
+      SpHelper.spHelper.saveUserType(accountType.toString());
+      if (AccType.Parchant == accountType) {
+        AppRouter.route.pushNamed('ParchantPage');
+      } else {
+        AppRouter.route.pushNamed('CustomerPage');
+      }
     }
 
     return Scaffold(
       appBar: AppBar(
         title: Text('login'),
         centerTitle: true,
-        backgroundColor: Colors.red[400],
+        backgroundColor: Colors.purple,
       ),
       body: Form(
         key: _form,
@@ -215,18 +216,22 @@ class _LoginState extends State<Login> {
                           hintText: 'Hide Field',
                         ),
                       ),
-                      DropdownButton<String>(
-                        items: items.map((e) {
-                          return DropdownMenuItem<String>(
-                            child: Text(e!),
-                            value: e,
-                          );
-                        }).toList(),
-                        value: initial,
-                        onChanged: (String? value) {
-                          this.initial = value!;
-                          setState(() {});
-                        },
+                      Padding(
+                        padding: const EdgeInsets.all(15),
+                        child: DropdownButton<String>(
+                          isExpanded: true,
+                          items: items.map((e) {
+                            return DropdownMenuItem<String>(
+                              child: Text(e!),
+                              value: e,
+                            );
+                          }).toList(),
+                          value: initial,
+                          onChanged: (String? value) {
+                            this.initial = value!;
+                            setState(() {});
+                          },
+                        ),
                       ),
                     ],
                   ),
@@ -238,7 +243,7 @@ class _LoginState extends State<Login> {
                 child: ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all<Color>(Colors.red[400]!),
+                        MaterialStateProperty.all<Color>(Colors.purple),
                   ),
                   onPressed: () {
                     _sendAuth();
